@@ -14,29 +14,18 @@ struct PokemonCell: View {
                 Text("Blastoise")
                     .font(.headline)
                     .foregroundColor(.yellow)
-                    .padding(.top, 5)
+                    .padding(.top, 30)
                     .padding(.leading)
                 
-                HStack {
-                    Text("water")
-                        .font(.subheadline).bold()
-                        .foregroundColor(.white)
-                        //applying padding to an actual text
-                        .padding(.horizontal, 18)
-                        .padding(.vertical, 9)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 20)
-                                .fill(Color.white.opacity(0.30))
-                        )
-                        .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: 40)
-                    
+                HStack (alignment: .center){
                     Image("blastoise")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 60, height: 60)
+                        .frame(width: 120, height: 180, alignment: .top)
                 }
             }
         }
+        .frame(width: 150, height: 220)
         .background(Color.blue)
         .cornerRadius(10)
     }
